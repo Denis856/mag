@@ -700,6 +700,9 @@ body {
       border-radius: 30px;
       background: $orange;
       color: #fff;
+      &:active {
+         transform: scale(0.7);
+      }
    }
 }
 

@@ -883,6 +883,10 @@ body {
   background: #E9672B;
   color: #fff;
 }
+.bestsellers__btn:active {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
 
 .floyd {
   max-width: 1280px;
