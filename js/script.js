@@ -24,9 +24,12 @@ var close_bask = document.querySelector('.cart__close');
 
 function showCart() {
    document.querySelector('.cart').classList.add('active');
+   document.querySelector('body').classList.add('active');
 }
 function hideCart() {
    document.querySelector('.cart').classList.remove('active');
+   document.querySelector('body').classList.remove('active');
+   document.querySelector('.window').classList.remove('active');
 }
 
 basket_icon.onclick = showCart;
@@ -45,6 +48,7 @@ for (let anchor of anchors) {
       document.getElementById(blockID).scrollIntoView({
          behavior: 'smooth',
          block: 'start'
-      })
-   })
+      });
+   });
 }
+

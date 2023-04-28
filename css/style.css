@@ -47,6 +47,11 @@ body {
   font-weight: 400;
   color: #000;
 }
+@media (max-width: 770px) {
+  body.active {
+    overflow: hidden;
+  }
+}
 
 .container {
   max-width: 1220px;
@@ -575,6 +580,7 @@ body {
   border-radius: 4px;
   background-color: #fff;
   margin: 0 0 30px 0;
+  cursor: pointer;
 }
 @media (max-width: 1100px) {
   .rooms__item {
@@ -1358,19 +1364,19 @@ body {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-.cart__title {
+.cart__buy, .cart__title {
   padding: 50px 0;
   text-align: center;
   font-size: 36px;
   line-height: 122.2222222222%;
 }
 @media (max-width: 1200px) {
-  .cart__title {
+  .cart__buy, .cart__title {
     font-size: calc(30px + 6 * (100vw - 450px) / 770);
   }
 }
 @media (max-width: 450px) {
-  .cart__title {
+  .cart__buy, .cart__title {
     font-size: 30px;
   }
 }
@@ -1385,13 +1391,21 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 20px;
-  padding-top: 30px;
+  margin-top: 50px;
 }
 .cart button {
   padding: 5px 10px;
   background: #E9672B;
   border-radius: 30px;
   color: #fff;
+}
+.cart__buy {
+  display: none;
+  margin: 50px auto;
+  background: green;
+}
+.cart__buy.active {
+  display: block;
 }
 
 .product {
@@ -1451,4 +1465,62 @@ body {
   border-radius: 50%;
   background: #E9672B;
   color: #fff;
+}
+
+.window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0.1);
+          transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  width: 400px;
+  padding: 50px 0;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding-top: 50px;
+  font-size: 36px;
+  line-height: 122.2222222222%;
+  color: #222;
+  background-color: #fff;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.window.active {
+  z-index: 30;
+  -webkit-transform: scale(1) translate(-50%, -50%);
+          transform: scale(1) translate(-50%, -50%);
+  opacity: 1;
+}
+@media (max-width: 1200px) {
+  .window {
+    font-size: calc(30px + 6 * (100vw - 450px) / 770);
+  }
+}
+@media (max-width: 450px) {
+  .window {
+    font-size: 30px;
+    width: 80%;
+  }
+}
+@media (max-width: 370px) {
+  .window {
+    width: 95%;
+  }
+}
+.window span {
+  margin-top: 200px;
+  color: green;
+  font-weight: 900;
+}
+.window p {
+  font-weight: 700;
+}
+
+.window p {
+  color: #000;
+  margin-top: 30px;
+  cursor: pointer;
 }
