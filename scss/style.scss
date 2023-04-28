@@ -872,7 +872,7 @@ body {
    left: 50%;
    transform: translate(-50%, -50%);
    width: 700px;
-   background: #252525;
+   background: #8d5d5d;
    color: #fff;
    z-index: 10;
    opacity: 0;
@@ -880,6 +880,7 @@ body {
    transform: translate(-50%, -50%) scale(0.9);
    transition: .3s;
    overflow: hidden;
+   border-radius: 10px;
    img {
       width: 100%;
       height: auto;

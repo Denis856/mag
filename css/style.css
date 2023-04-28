@@ -1117,7 +1117,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 700px;
-  background: #252525;
+  background: #8d5d5d;
   color: #fff;
   z-index: 10;
   opacity: 0;
@@ -1127,6 +1127,7 @@ body {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   overflow: hidden;
+  border-radius: 10px;
 }
 .preview_box img {
   width: 100%;
